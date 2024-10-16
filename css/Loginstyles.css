@@ -81,7 +81,7 @@ button, input {
 }
 .image-section {
     width: 50%;
-    background: url('Routify/css/img/LogIn.jpg') no-repeat center center;
+    background: url('./img/LogIn.jpg') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
