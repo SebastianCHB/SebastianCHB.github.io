@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.form-section {
+    width: 50%;
+    padding: 40px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items: center;
+    text-align: center;
+}
+#main-text {
+    font-size: 4.5rem;
+    font-weight: bolder;
+}
+#subtext {
+    font-size: 1rem;
+    margin-bottom: 0px;
+    font-weight: lighter;
+}
+button, input {
+    width: 260px;
+    height: 40px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 0.8rem;
+}
+#google {
+    width: 260px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-radius: 10px;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+#google img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+#login-button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s ease-in;
+}
+#login-button:hover{
+    background-color: transparent;
+    border-color:black;
+    color: black;
+}
+.image-section {
+    width: 50%;
+    background: url('/Routify/css/img/LogIn.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#forgot-password{
+   margin-left: 140px;
+   font-size: 0.8rem;
+}
+.image-text {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+#or{
+    font-size: 0.8rem;
+}
+p{
+    font-size: 0.8rem;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 10px black;
+    background-color: #f9f9f9;
+}   

@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('./img/LPBackground.jpg'); 
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen */
+}
+.menu{
+    display: flex;
+    justify-content: space-between;  /* Espacio entre los botones y el menú */
+    align-items: center;
+    width: 100%;
+    padding: 10px 30px;
+}
+div>.menu-items>.Item-active{
+    font-weight: bold;
+    color: white
+}
+.menu-items{
+    flex-grow: 1; /* espacio central */
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    color: white;
+}
+.Item{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    opacity: 70%;
+}
+.btns{
+    display: flex;
+    gap: 10px;
+}
+.buttons{
+    width: 100px;
+    height: 35px;
+    padding: 5px;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    opacity: 70%;
+    transition: 0.2s ease-in;
+}
+.buttons:hover{
+    background-color: white;
+    color: black;
+    opacity: 70%;
+}
+.logo{
+    margin-top: 10px;
+    width: 220px;
+    height: 45px;
+}
+.main-text{
+    color: white;
+    font-size: 25px;
+    margin-top: 16vh;
+    margin-left: 8vh;
+}
+.start{
+    margin-top: 30px;
+    height: 45px;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border: none;
+    font-weight: bold;
+    padding-right: 10px;
+    gap: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;
+}
+.start:hover{
+    transform: scale(1.2);
+}
+.start>#icon{
+    height: 40px;
+    width: 40px;
+}
+#lower-text{
+    margin-top: 30px;
+    font-size: 17px;
+    width: 450px;
+    font-weight: lighter;
+}
+#fb{
+    height: 55px;
+    width: 55px;
+    margin-left: 710px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;
+}
+#fb:hover{
+    transform: scale(1.2);
+}
+#ig{
+     height: 50px;
+     width: 50px;
+     margin-left: 793px;
+     cursor: pointer;
+     transition: 0.3s ease-in-out all;
+}
+#ig:hover{
+    transform: scale(1.2);
+}
+#x{
+    height: 50px;
+    width: 52px;
+    margin-left: 947.5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out all;}
+#x:hover{ transform: scale(1.2);}
+#home{ cursor: pointer; transition: 0.3s ease-in-out all;}
+#home:hover{  transform: scale(1.2);}
+#features{transition: 0.3s ease-in-out all;}
+#features:hover{transform: scale(1.2);}
+#pricing{transition: 0.3s ease-in-out all;}
+#pricing:hover{transform: scale(1.2);}
+#testimonials{ transition: 0.3s ease-in-out all;}
+#testimonials:hover{ transform: scale(1.2);}

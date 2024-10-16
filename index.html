@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paginona</title>
+    <link rel="stylesheet" href="css/LandingPageStyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="css/img/R.png" type="img">
+    <title>Routify</title>
 </head>
 <body>
-    <h1>Hola mundo soy sebas</h1>
+    <div class="menu">
+            <img class="logo" src="css/img/Logowht.png" alt="">
+        <div class="menu-items">
+            <div class="Item-active" id="home">Home</div>
+            <div class="Item" id="features">Features</div>
+            <div class="Item" id="pricing">Pricing</div>
+            <div class="Item" id="testimonials">Testimonials</div>
+        </div>
+        <div class="btns">
+            <button class="buttons" onclick="changeLogin()">Log In</button>
+            <button class="buttons" onclick="changeSignup()">Sign Up</button>
+        </div>   
+    </div>
+    <div class="main-text">
+    <h1>Weaving Your Dreams<img id="fb" src="css/img/FB.png" alt=""></h1>
+    <h1>into Unforgettable <img id="ig"src="css/img/IG.png" alt=""></h1>
+    <h1>Adventures <img id="x"src="css/img/TWT.png" alt=""></h1>
+    <button class="start">Start Exploring<img id="icon" src="css/img/circle-arrows.png" alt=""></button>
+    <h6 id="lower-text">"Discover the Ultimate Way to Plan Your Adventures with 
+        Routify—Craft Perfect Routes, Explore Hidden Gems, and
+         Make Every Journey Unforgettable. Start Your Adventure Today!"</h6>
+    </div>
+    <script src="js/LandingPScripts.js"></script>
 </body>
 </html>
