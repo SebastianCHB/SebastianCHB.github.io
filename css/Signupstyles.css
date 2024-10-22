@@ -118,11 +118,6 @@ input[type="text"]:focus, input[type="password"]:focus {
     justify-content: center;
     gap: 1.5vh;
 }
-.container>.form-section>#texts{
-    display: flex;
-    justify-content: center;
-    gap: 1vh;
-}
 #google.fb {
     background-color: #1877f2;
     color: white;
