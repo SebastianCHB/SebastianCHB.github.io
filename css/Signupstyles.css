@@ -84,7 +84,7 @@ button, input {
 }
 .image-section2 {
     width: 50%;
-    background: url('./img/SignUo.jpg') no-repeat center center;
+    background: url('./img/SignUo.webp') no-repeat center center;
     background-size: cover;
     display: flex;
     justify-content: center;
