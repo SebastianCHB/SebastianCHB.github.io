@@ -36,7 +36,7 @@ body {
     font-weight: lighter;
 }
 button, input {
-    width: 370px;
+    width: 300px;
     height: 40px;
     padding: 12px;
     margin: 10px 0;
@@ -115,10 +115,9 @@ input[type="text"]:focus, input[type="password"]:focus {
     gap: 1.5vh;
 }
 .container>.form-section>#texts{
-    width: 20%;
     display: flex;
     justify-content: center;
-    gap: 1.5vh;
+    gap: 1vh;
 }
 #google.fb {
     background-color: #1877f2;
@@ -126,6 +125,9 @@ input[type="text"]:focus, input[type="password"]:focus {
     gap: 10px;
     transition: 0.2s ease-in-out all ;
 }
-#LogoBlck{
-    margin-left: 35%;
+#text-box{
+    width: 147px;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
 }
