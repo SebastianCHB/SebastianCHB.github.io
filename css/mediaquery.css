@@ -1,0 +1,18 @@
+@media (max-width: 768px) {
+    .image-section {
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+    
+    .form-section {
+        width: 100%; /* El formulario ahora ocupa el 100% del ancho */
+    }
+}
+@media (max-width: 1200px) {
+    .image-section {
+        display: none; /* Oculta la imagen en pantallas pequeñas */
+    }
+    
+    .form-section {
+        width: 100%; /* El formulario ahora ocupa el 100% del ancho */
+    }
+}
