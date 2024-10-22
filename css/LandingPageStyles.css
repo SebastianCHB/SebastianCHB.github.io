@@ -98,7 +98,6 @@ div>.menu-items>.Item-active{
 #fb{
     height: 55px;
     width: 55px;
-    margin-left: 710px;
     cursor: pointer;
     transition: 0.3s ease-in-out all;
 }
@@ -108,7 +107,6 @@ div>.menu-items>.Item-active{
 #ig{
      height: 50px;
      width: 50px;
-     margin-left: 793px;
      cursor: pointer;
      transition: 0.3s ease-in-out all;
 }
@@ -118,7 +116,6 @@ div>.menu-items>.Item-active{
 #x{
     height: 50px;
     width: 52px;
-    margin-left: 947.5px;
     cursor: pointer;
     transition: 0.3s ease-in-out all;}
 #x:hover{ transform: scale(1.2);}
@@ -130,3 +127,12 @@ div>.menu-items>.Item-active{
 #pricing:hover{transform: scale(1.2);}
 #testimonials{ transition: 0.3s ease-in-out all;}
 #testimonials:hover{ transform: scale(1.2);}
+#footerpg{
+    flex-grow: 1; /* espacio central */
+    display: flex;
+    justify-content: center; 
+    gap: 20px;
+    color: white;
+    margin-top:6%;
+    font-weight: bold;
+}
