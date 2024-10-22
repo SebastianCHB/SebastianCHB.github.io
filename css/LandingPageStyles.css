@@ -6,7 +6,7 @@
 body{
     height: 100vh;
     font-family: Arial, sans-serif;
-    background-image: url('./img/LPBackground.jpg'); 
+    background-image: url('./img/LPBackground.webp'); 
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
@@ -127,7 +127,7 @@ div>.menu-items>.Item-active{
 #pricing:hover{transform: scale(1.2);}
 #testimonials{ transition: 0.3s ease-in-out all;}
 #testimonials:hover{ transform: scale(1.2);}
-#footerpg{
+#footerpgg{
     flex-grow: 1; /* espacio central */
     display: flex;
     justify-content: center; 
