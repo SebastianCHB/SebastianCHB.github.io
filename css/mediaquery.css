@@ -16,3 +16,26 @@
         width: 100%; /* El formulario ahora ocupa el 100% del ancho */
     }
 }
+@media (max-width: 768px) {
+    .image-section2 {
+        display: none; 
+    }
+    #main-text{
+        font-size: 50px;
+    }
+    .form-section {
+        width: 100%; 
+    }
+}
+@media (max-width: 1200px) {
+    .image-section2 {
+        display: none; 
+    }
+    #main-text{
+        font-size: 50px;
+    }
+    .form-section {
+        width: 100%; 
+    }
+
+}
