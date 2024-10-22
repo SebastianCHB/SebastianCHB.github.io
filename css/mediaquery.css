@@ -39,3 +39,49 @@
     }
 
 }
+
+/*Landing Page*/
+@media (max-width: 768px) {
+    body {
+        margin: 0; /* Elimina el margen predeterminado */
+        padding: 0; /* Elimina el padding predeterminado */
+        background-image: url('./img/LPBackground.jpg'); /* Si usas una imagen de fondo */
+        background-color: #f0f0f0; /* Color de fondo si no usas imagen */
+        background-size: cover; /* Hace que la imagen cubra todo el fondo */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        min-height: 100vh; /* Asegura que el fondo cubra al menos el 100% de la altura de la ventana */
+    }
+    .logo{
+        display: none;
+    }
+    .menu-items{
+        display: none;
+    }
+    .main-text{
+    font-size: 18px;
+    }
+    #lower-text{
+        margin-top: 30px;
+        font-size: 17px;
+        width: 260px;
+        font-weight: lighter;
+    }
+    .btns{
+        display: flex;
+        margin-top: 10px;
+        margin-left: 14%;
+        gap: 10px;
+    }
+@media (max-width: 1200px) {
+    .image-section2 {
+        display: none; 
+    }
+    #main-text{
+        font-size: 50px;
+    }
+    .form-section {
+        width: 100%; 
+    }
+}
+}
