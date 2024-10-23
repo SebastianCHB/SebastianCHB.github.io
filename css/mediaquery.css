@@ -41,7 +41,7 @@
 }
 
 /*Landing Page*/
-@media (max-width: 768px) {
+@media ( max-width: 768px) {
     body {
         margin: 0; /* Elimina el margen predeterminado */
         padding: 0; /* Elimina el padding predeterminado */
@@ -52,14 +52,18 @@
         background-repeat: no-repeat; /* Evita que la imagen se repita */
         min-height: 100vh; /* Asegura que el fondo cubra al menos el 100% de la altura de la ventana */
     }
+    .main-text{
+        margin-top: 8vh;
+    }
     .logo{
-        display: none;
+        display: flex;
+        height: 20px;
     }
     .menu-items{
         display: none;
     }
     .main-text{
-    font-size: 18px;
+       font-size: 20px;
     }
     #lower-text{
         margin-top: 30px;
@@ -70,9 +74,10 @@
     .btns{
         display: flex;
         margin-top: 10px;
-        margin-left: 14%;
+        margin-left: 2%;
         gap: 10px;
     }
+}
 @media (max-width: 1200px) {
     .image-section2 {
         display: none; 
@@ -83,5 +88,4 @@
     .form-section {
         width: 100%; 
     }
-}
 }

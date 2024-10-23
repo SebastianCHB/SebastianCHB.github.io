@@ -34,7 +34,7 @@ body{
 }
 .btns{
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 .buttons{
     width: 100px;
@@ -408,4 +408,23 @@ color: white;
 .testimonial-card em {
     color: #444;
     font-size: 16px;
+}
+/*HAMBURGUESA ICONO*/
+
+/* Ocultar el ícono de hamburguesa por defecto */
+.hamburger-icon {
+    display: none;
+    margin-top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Media query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+    .menu-items {
+        display: none; /* Oculta los items del menú */
+    }
+    .hamburger-icon {
+        display: block; /* Muestra el icono de hamburguesa */
+    }
 }
