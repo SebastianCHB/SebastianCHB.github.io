@@ -10,6 +10,7 @@ body{
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     background-position: center; /* Centra la imagen */
+    overflow: hidden;
 }
 .menu{
     display: flex;
@@ -17,10 +18,6 @@ body{
     align-items: center;
     width: 100%;
     padding: 10px 30px;
-}
-div>.menu-items>.Item-active{
-    font-weight: bold;
-    color: white
 }
 .menu-items{
     flex-grow: 1; /* espacio central */
@@ -119,14 +116,6 @@ div>.menu-items>.Item-active{
     cursor: pointer;
     transition: 0.3s ease-in-out all;}
 #x:hover{ transform: scale(1.2);}
-#home{ cursor: pointer; transition: 0.3s ease-in-out all;}
-#home:hover{  transform: scale(1.2);}
-#features{transition: 0.3s ease-in-out all;}
-#features:hover{transform: scale(1.2);}
-#pricing{transition: 0.3s ease-in-out all;}
-#pricing:hover{transform: scale(1.2);}
-#testimonials{ transition: 0.3s ease-in-out all;}
-#testimonials:hover{ transform: scale(1.2);}
 #footerpgg{
     flex-grow: 1; /* espacio central */
     display: flex;
@@ -135,4 +124,288 @@ div>.menu-items>.Item-active{
     color: white;
     margin-top:6%;
     font-weight: bold;
+}
+.content-section {
+    display: none;
+}
+.content-section.active {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+div div.active {
+    font-weight: bolder;
+    color:white;
+}
+
+/*FEATURES*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth button {
+    background-color: #fff;
+    color: #2a2a2a;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.auth button:hover {
+    background-color: #ddd;
+}
+
+.hero 
+    {
+    position: relative;
+    text-align: center;
+    padding: 50px;
+}
+
+.overlay h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: none;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: none;
+    width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card.explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card.explore:hover {
+    background-color: #444;
+}
+
+/*Pricing*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth button {
+    background-color: #fff;
+    color: #2a2a2a;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.auth button:hover {
+    background-color: #ddd;
+}
+
+.pricing-section {
+    text-align: center;
+    padding: 50px;
+    background-image: url('mountain-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+#pricinggg{
+    color: white;
+}
+.pricing-section h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.pricing-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.plan-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: none;
+    text-align: left;
+}
+
+.plan-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.plan-card h3 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.plan-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.plan-card ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.plan-card ul li {
+    margin-bottom: 10px;
+}
+
+.plan-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.plan-card button:hover {
+    background-color: #444;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.auth button {
+    background-color: #fff;
+    color: #2a2a2a;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.auth button:hover {
+    background-color: #ddd;
+}
+
+.testimonials-section {
+    text-align: center;
+    padding: 50px;
+    background-image: url('mountain-background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+#testimoniall{
+color: white;
+}
+
+.testimonials-section h1 {
+    font-size: 48px;
+    margin-bottom: 40px;
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.testimonial-card p {
+    margin-bottom: 15px;
+}
+
+.testimonial-card strong {
+    font-size: 18px;
+}
+
+.testimonial-card em {
+    color: #444;
+    font-size: 16px;
 }

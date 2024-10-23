@@ -13,25 +13,106 @@
     <div class="menu">
             <img class="logo" src="css/img/Logowht.png" alt="">
         <div class="menu-items">
-            <div class="Item-active" id="home">Home</div>
-            <div class="Item" id="features">Features</div>
-            <div class="Item" id="pricing">Pricing</div>
-            <div class="Item" id="testimonials">Testimonials</div>
+            <div class="Item" id="menu-home">Home</div>
+            <div class="Item" id="menu-features">Features</div>
+            <div class="Item" id="menu-pricing">Pricing</div>
+            <div class="Item" id="menu-testimonials">Testimonials</div>
         </div>
         <div class="btns">
             <button class="buttons" onclick="changeLogin()">Log In</button>
             <button class="buttons" onclick="changeSignup()">Sign Up</button>
         </div>   
+        
     </div>
-    <div class="main-text">
-    <h1 id="fbh1">Weaving Your Dreams</h1>
-    <h1 id="igh1">into Unforgettable </h1>
-    <h1 id="xh1">Adventures</h1>
-    <button class="start">Start Exploring<img id="icon" src="css/img/circle-arrows.png" alt=""></button>
-    <h6 id="lower-text">"Discover the Ultimate Way to Plan Your Adventures with 
-        Routify—Craft Perfect Routes, Explore Hidden Gems, and
-         Make Every Journey Unforgettable. Start Your Adventure Today!"</h6>
-    </div>
+    <div id="home" class="content-section active">
+        <!-- Contenido de la sección Home -->
+        <div class="main-text">
+            <h1 id="fbh1">Weaving Your Dreams</h1>
+            <h1 id="igh1">into Unforgettable </h1>
+            <h1 id="xh1">Adventures</h1>
+            <button class="start">Start Exploring<img id="icon" src="css/img/circle-arrows.png" alt=""></button>
+            <h6 id="lower-text">"Discover the Ultimate Way to Plan Your Adventures with 
+                Routify—Craft Perfect Routes, Explore Hidden Gems, and
+                 Make Every Journey Unforgettable. Start Your Adventure Today!"</h6>
+        </div>
+        </div>
+        <div id="features" class="content-section hidden">
+            <!-- Contenido de la sección Features -->
+            <section class="hero">
+                <div class="overlay">
+                    <h1>Do you have a destination in mind? With our platform, you can create tailored itineraries based on your interests.</h1>
+                </div>
+        
+                <div class="cards">
+                    <div class="card">
+                        <img src="./css/img/Nature.webp" alt="Hot Air Balloon">
+                    </div>
+                    <div class="card">
+                        <img src="./css/img/Beach.webp" alt="Beach Relax">
+                    </div>
+                    <div class="card explore">
+                        <h2>Explore more!!</h2>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+         <div id="pricing" class="content-section hidden">
+        <!-- Contenido de la sección Pricing -->
+        <section class="pricing-section">
+            <h1 id="pricinggg">Pricing</h1>
+            <p id="pricinggg">"Choose the Perfect Plan for your Next Adventure"</p>
+    
+            <div class="plans">
+                <div class="plan-card basic-plan">
+                    <h2>Basic Plan</h2>
+                    <h3>FREE!</h3>
+                    <p>Ideal for casual travelers looking for simple and personalized recommendations on their adventures.</p>
+                    <ul>
+                        <li>Basic Itineraries</li>
+                        <li>Personalized recommendations</li>
+                        <li>Price comparator for flights and accommodation</li>
+                        <li>Access to travel guides and local activities</li>
+                        <li>Email support</li>
+                    </ul>
+                    <button>GET STARTED</button>
+                </div>
+    
+                <div class="plan-card adventure-plan">
+                    <h2>Adventure Plan</h2>
+                    <h3>$9.99/month</h3>
+                    <p>The ultimate package for globetrotters who want limitless travel planning experience.</p>
+                    <ul>
+                        <li>Unlimited itineraries</li>
+                        <li>Personalized recommendations including VIP experiences</li>
+                        <li>Price alert and comparator with real-time updates</li>
+                        <li>Exclusive access to guided tours and travel experts</li>
+                        <li>Access to premium content such as detailed guides and expert blogs</li>
+                    </ul>
+                    <button>GET STARTED</button>
+                </div>
+            </div>
+        </section>
+    
+         </div>
+         <div id="testimonials" class="content-section hidden">
+        <!-- Contenido de la sección Testimonials -->
+        <section class="testimonials-section">
+            <h1 id="testimoniall">Testimonials</h1>
+    
+            <div class="testimonial-card">
+                <p><strong>"The best experience of my life!"</strong></p>
+                <p>"Thanks to [your page name], I was able to plan my dream trip to Iceland without complications. The hidden destination recommendations and the ease of organizing my itinerary were key. I will definitely use your service for my next trip."</p>
+                <p><em>— Carla M., Adventure Traveler</em></p>
+            </div>
+    
+            <div class="testimonial-card">
+                <p><strong>"A service that really understands what you need!"</strong></p>
+                <p>"I love traveling, but it's always a challenge to find good deals and plan everything. With their price comparison and personalized itineraries, everything became much easier. The 24/7 support was also a great help!"</p>
+                <p><em>— Luis P., Frequent Traveler</em></p>
+            </div>
+        </section>
+        </div>
     <footer id="footerpgg"><img src="./css/img/IG.png" id="ig" alt=""><img src="./css/img/TWT.png" id="ig" alt=""><img src="./css/img/FB.png" id="fb" alt=""></footer>
     <script id="" src="js/LandingPScripts.js"></script>
 </body>
