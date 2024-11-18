@@ -24,7 +24,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+    text-align: center;
+}
+.form-validate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
@@ -110,3 +116,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     box-shadow: 0 0 10px black;
     background-color: #f9f9f9;
 }   
+
+.swal-footer {
+    font-weight: bold;
+  }

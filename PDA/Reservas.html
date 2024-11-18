@@ -4,28 +4,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
+  <title>ROUTIFY ADMINISTRATION PANEL</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
   <div class="d-flex">
     <!--sidebbar-->
     <aside class="bg-dark text-white vh-100" style="width: 20%;">
-      <h2 class="p-4 h4">
-        <img width="50px" src="./img/nogordas-removebg-preview.png" alt="" class="mx-1">
-        Dietas
-      </h2>
+      <h1 class="p-4 h1">
+        Routify
+      </h1>
       <ul class="nav flex-column">
-        <li class="nav-item h5 mx-2"><a href="./index.html" class="nav-link text-white"><i
-              class="bi bi-house mx-2"></i>Home</a></li>
-        <li class="nav-item h5 mx-2"><a href="./dietas.html" class="nav-link text-white"><i
-              class="bi bi-egg-fried mx-2"></i>Diet</a></li>
-        <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i
-              class="bi bi-people mx-2"></i>User</a></li>
+        <li class="nav-item h5 mx-2"><a href="./index.html" class="nav-link text-white"><i class="bi bi-house mx-2"></i>Home</a></li>
+        <li class="nav-item h5 mx-2"><a href="./Reservas.html" class="nav-link text-white"><i class="fa-solid fa-list-check" style="color: #ffffff;"></i>&nbsp;Reservations</a></li>
+        <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i class="bi bi-people mx-2"></i>User</a></li>
       </ul>
     </aside>
     <!--end sidebbar-->
@@ -35,7 +32,7 @@
       <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary px-4 py-4">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">Dashboard</a>
+            <a class="navbar-brand" href="#">ROUTIFY ADMINISTRATION PANEL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
               aria-label="Toggle navigation">
@@ -53,21 +50,19 @@
                   </button>
                 </li>
                 <li class="nav-item">
-
-                  <img src="./img/lopezDoriga.jpg"
-                    style="width: 30px;border-radius: 50%;border: 1px solid rgb(13, 106, 13);">
+                  <i class="fa-solid fa-user pt-2"></i>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    Lopez Doriga
+                    Administrador
                   </a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i>&nbsp;Perfil</a></li>
                     <li>
                       <hr class="dropdown-divider">
                     </li>
-                    <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i>&nbsp;Log Out</a></li>
+                    <li><a class="dropdown-item" href="../login.html"><i class="bi bi-box-arrow-left"></i>&nbsp;Log Out</a></li>
                   </ul>
                 </li>
               </ul>
@@ -78,7 +73,7 @@
       <!--end hedear-->
       <!--Title section-->
       <div class="mx-4 d-flex justify-content-between">
-        <h1 class="h4">Dietas</h1>
+        <h1 class="h4">Reservations</h1>
         <div>
           <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modalAdd">Agregar</button>
         </div>
@@ -88,50 +83,20 @@
         <div class="row">
             <div class="col-3 mt-2 p-2">
                 <div class="card">
-                    <img src="./img/diet_food.jpg" height="200px" class="card-img-top" alt="...">
+                    <img src="./img/beach.webp" height="200px" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Ensalada de pollo</h5>
-                      <p class="card-text">Ensalada con lechuga, aguacate, aceitunas, pasta y arriba con pollo empanizado y un huevo cocido</p>
+                      <h5 class="card-title">Beach</h5>
+                      <p class="card-text">  A wide stretch of golden sand bordered by crystal-clear turquoise waters, perfect for relaxing under the sun and enjoying gentle sea breezes.</p>
                       <a href="#" class="btn btn-dark w-100">Ver dieta</a>
                     </div>
                   </div>
             </div>
             <div class="col-3 mt-2 p-2">
                 <div class="card">
-                    <img src="./img/diet_food1 (2).jpg" height="200px" class="card-img-top" alt="...">
+                    <img src="./img/hotel.webp" height="200px" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Ensalada de pollo</h5>
-                      <p class="card-text">Ensalada con lechuga, aguacate, aceitunas, pasta y arriba con pollo empanizado y un huevo cocido</p>
-                      <a href="#" class="btn btn-dark w-100">Ver dieta</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3 mt-2 p-2">
-                <div class="card">
-                    <img src="./img/diet_food2.jpg" height="200px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Ensalada de pollo</h5>
-                      <p class="card-text">Ensalada con lechuga, aguacate, aceitunas, pasta y arriba con pollo empanizado y un huevo cocido</p>
-                      <a href="#" class="btn btn-dark w-100">Ver dieta</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3 mt-2 p-2">
-                <div class="card">
-                    <img src="./img/diet_food3.jpg" height="200px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Ensalada de pollo</h5>
-                      <p class="card-text">Ensalada con lechuga, aguacate, aceitunas, pasta y arriba con pollo empanizado y un huevo cocido</p>
-                      <a href="#" class="btn btn-dark w-100">Ver dieta</a>
-                    </div>
-                  </div>
-            </div>
-            <div class="col-3 mt-2 p-2">
-                <div class="card">
-                    <img src="./img/diet_food4.jpg" height="200px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Ensalada de pollo</h5>
-                      <p class="card-text">Ensalada con lechuga, aguacate, aceitunas, pasta y arriba con pollo empanizado y un huevo cocido</p>
+                      <h5 class="card-title">Hotel</h5>
+                      <p class="card-text">A stylish beachfront hotel with modern rooms and panoramic views, offering impeccable service, a gourmet restaurant, and an infinity pool.</p>
                       <a href="#" class="btn btn-dark w-100">Ver dieta</a>
                     </div>
                   </div>

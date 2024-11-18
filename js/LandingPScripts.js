@@ -10,11 +10,11 @@ function changeSignup(){
 function changeLandingp(){
     window.location.href='index.html'
 }
-
+/*
 function changePDA(){
     window.location.href='./PDA/index.html'
 }
-
+*/
 
 // Seleccionamos todos los elementos del menú y secciones
 const menuItems = document.querySelectorAll('div div');
@@ -58,3 +58,66 @@ document.getElementById('menu-testimonials').addEventListener('click', function(
     this.classList.add('active');
     activateSection('testimonials');
 });
+
+
+// Función para manejar el login
+document.getElementById("loginButton").addEventListener("click", function () {
+    var email = document.getElementById("email").value.trim();
+    var password = document.getElementById("password").value.trim();
+
+    // Validación de las credenciales de usuario
+    var loggedInUser = users.find(
+        (user) => user.username === email && user.password === password
+    );
+
+    if (loggedInUser) {
+        // Si el login es exitoso, redirigir al usuario
+        window.location.href = "./index.html"; // Cambia a la página de inicio después de login
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "User or Password incorrect",
+        });
+    }
+});
+window.onload = function() {
+    // Revisamos si el usuario ha iniciado sesión (puedes usar localStorage o sesión)
+    // Aquí asumimos que si el usuario ha iniciado sesión, deberíamos ocultar los botones
+    if (localStorage.getItem("loggedIn") === "true") {
+        // Ocultar los botones de login y signup
+        document.getElementById("loginButton").style.display = "none";
+        document.getElementById("signupButton").style.display = "none";
+    }
+};
+document.getElementById("loginButton").addEventListener("click", function () {
+    var email = document.getElementById("email").value.trim();
+    var password = document.getElementById("password").value.trim();
+
+    var loggedInUser = users.find(
+        (user) => user.username === email && user.password === password
+    );
+
+    if (loggedInUser) {
+        // Almacenar en localStorage que el usuario ha iniciado sesión
+        localStorage.setItem("loggedIn", "true");
+
+        // Redirigir a la landing page (index.html)
+        window.location.href = "./index.html"; 
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "User or Password incorrect",
+        });
+    }
+});
+function logout() {
+    // Eliminar la clave de loggedIn en localStorage
+    localStorage.removeItem("loggedIn");
+
+    // Volver a mostrar los botones de login y signup
+    document.getElementById("loginButton").style.display = "block";
+    document.getElementById("signupButton").style.display = "block";
+}
+

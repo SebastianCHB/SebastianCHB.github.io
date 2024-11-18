@@ -5,9 +5,9 @@ new Chart(ctx, {
   data: {
     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
     datasets: [{
-      label: 'ingresos por mes',
-      data: [200000, 300000, 250000, 500000, 600000, 320000,104443,20000,15000,212333,550000,100000],
-      borderWidth: 1
+      label: 'Ingresos por mes',
+      data: [0,1000,500,200,200,100,0,0,0,0,0,0],
+      borderWidth: 2
     }]
   },
   options: {
@@ -23,13 +23,13 @@ new Chart(ctx, {
 const ctx1 = document.getElementById('chartCategorias');
 
   new Chart(ctx1, {
-    type: 'pie',
+    type: 'bar',
     data: {
-      labels: ['Desayuños', 'Comida', 'Cenas', 'Snacks'],
+      labels: ['Beach', 'Hotels', 'Museum', 'Others'],
       datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 2],
-        borderWidth: 1
+        label: 'Top Reservations',
+        data: [1, 1, 0, 0],
+        borderWidth: 2
       }]
     },
     options: {
