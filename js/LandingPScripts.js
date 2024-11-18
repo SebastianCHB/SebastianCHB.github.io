@@ -12,7 +12,7 @@ function changeLandingp(){
 }
 
 function changePDA(){
-    window.location.href='./PDA/idex.html'
+    window.location.href='./PDA/index.html'
 }
 
 
