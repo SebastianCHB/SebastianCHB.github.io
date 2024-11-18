@@ -11,6 +11,10 @@ function changeLandingp(){
     window.location.href='index.html'
 }
 
+function changePDA(){
+    window.location.href='./PDA/idex.html'
+}
+
 
 // Seleccionamos todos los elementos del menú y secciones
 const menuItems = document.querySelectorAll('div div');
