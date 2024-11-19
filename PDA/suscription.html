@@ -28,8 +28,9 @@
           <li class="nav-item h5 mx-2"><a href="./suscription_status.html" class="nav-link text-white"><i class="fa-solid fa-handshake"></i>&nbsp;Suscription Status</a></li>
           <li class="nav-item h5 mx-2"><a href="./payment.html" class="nav-link text-white"><i class="fa-solid fa-bag-shopping"></i>&nbsp;Payment</a></li>
         </ul>
-    </aside>
+        </aside>
     <!--end sidebbar-->
+
     <main class="flex-grow-1">
         <!--header-->
         <header>
@@ -75,7 +76,7 @@
       <!--end hedear-->
       <!--Title section-->
       <div class="mx-4 d-flex justify-content-between" style="padding-top: 40px;">
-        <h1 class="h4">Reservations</h1>
+        <h1 class="h4">Users</h1>
         <div>
           <button class="btnrft btn-dark btnrtf" data-bs-toggle="modal" data-bs-target="#modalAdd">Add</button>
         </div>
@@ -85,11 +86,9 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">ID_Reserva</th>
-              <th scope="col">NOMBRE</th>
-              <th scope="col">LUGAR</th>
-              <th scope="col">FECHA_IDA</th>
-              <th scope="col">FECHA_REGRESO</th>
+              <th scope="col">ID_SUSCRIPTION</th>
+              <th scope="col">PRICE</th>
+              <th scope="col">LEVEL</th>
               <th></th>
             </tr>
           </thead>
@@ -97,12 +96,10 @@
             <!--REGISTROS-->
             <tr>
               <td>1</td>
-              <td>Jeff</td>
-              <td>HOTEL 5 ESTRELLAS CANCUN</td>
-              <td>20/7/25</td>
-              <td>30/7/25</td>
+              <td>$9.99</td>
+              <td>Adventure Plan</td>
               <td class="text-end">
-                <button class="btn btn-outline-danger btn-sm btndeletereserva">
+                <button class="btn btn-outline-danger btn-sm btndeletesus">
                   <i class="bi bi-trash2"></i>
                 </button>
                 <button class="btn btn-outline-warning btn-sm mx-2">
@@ -115,12 +112,10 @@
             </tr>
             <tr>
               <td>2</td>
-              <td>Pepe</td>
-              <td>PLAYA SAN CARLOS</td>
-              <td>10/6/25</td>
-              <td>04/7/25</td>
+              <td>$0.00</td>
+              <td>Basic Plan</td>
               <td class="text-end">
-                <button class="btn btn-outline-danger btn-sm btndeletereserva">
+                <button class="btn btn-outline-danger btn-sm btndeletesus">
                   <i class="bi bi-trash2"></i>
                 </button>
                 <button class="btn btn-outline-warning btn-sm mx-2">
@@ -133,12 +128,10 @@
             </tr>
             <tr>
               <td>3</td>
-              <td>Jose</td>
-              <td>HOTEL 5 ESTRELLAS ACAPULCO</td>
-              <td>10/9/25</td>
-              <td>24/9/25</td>
+              <td>$9.99</td>
+              <td>Adventure Plan</td>
               <td class="text-end">
-                <button class="btn btn-outline-danger btn-sm btndeletereserva">
+                <button class="btn btn-outline-danger btn-sm btndeletesus">
                   <i class="bi bi-trash2"></i>
                 </button>
                 <button class="btn btn-outline-warning btn-sm mx-2">
@@ -149,6 +142,7 @@
                 </button>
               </td>
             </tr>
+            <tr>
             <!--END REGISTROS-->
           </tbody>
         </table>
@@ -161,18 +155,23 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Add Reservation</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add User</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <!-- action="./php/user_insert.php"-->
         <form method="post" class="needs-validation" novalidate id="form">
           <div class="modal-body">
             <div class="row">
-              <div class="col-12 mb-2">
-                <label for="">Full Name:</label>
-                <input name="txtName" required type="text" class="form-control" placeholder="Put your full name">
+              <div class="col-6 mb-2">
+                <label for="">Name:</label>
+                <input name="txtName" required type="text" class="form-control" placeholder="Insert name">
                 <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
+                <div class="invalid-feedback">Invalid data</div>
+              </div>
+              <div class="col-6 mb-2">
+                <label  for="">Last Name:</label>
+                <input name="txtLast" required type="text" class="form-control" placeholder="Insert last name">
+                <div class="valid-feedback">Correct</div>
+                <div class="invalid-feedback">Invalid data</div>
               </div>
             </div>
             <div class="row">
@@ -180,59 +179,41 @@
                 <label for="">Age:</label>
                 <input name="txtEdad" required min="1" type="number" class="form-control" placeholder="Insert age">
                 <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
+                <div class="invalid-feedback">Invalid data</div>
               </div>
               <div class="col-4 mb-2">
-                <label for="">Email:</label>
-                <input name="txtPeso" required min="1" type="email" class="form-control" placeholder="Insert email">
+                <label for="">Weight:</label>
+                <input name="txtPeso" required min="1" type="number" class="form-control" placeholder="Insert weight">
                 <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
+                <div class="invalid-feedback">Invalid data</div>
               </div>
               <div class="col-4 mb-2">
-                <label for="">Phone Number:</label>
-                <input name="txtEstatura" required min="1" type="number" class="form-control" placeholder="Insert your phone number">
+                <label for="">Stature:</label>
+                <input name="txtEstatura" required min="1" type="number" class="form-control" placeholder="Insert stature">
                 <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
+                <div class="invalid-feedback">Invalid data</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 mb-2">
+                <label for="">Email</label>
+                <input name="txtEmail" required type="email" class="form-control" placeholder="Insert email">
+                <div class="valid-feedback">Correct</div>
+                <div class="invalid-feedback">Invalid data</div>
               </div>
             </div>
             <div class="row">
               <div class="col-6 mb-2">
-                <label for="">Departure date</label>
-                <input name="txtEmail" required type="date" class="form-control" placeholder="Insert departure date">
+                <label for="">Password</label>
+                <input name="txtPassword" required type="password" class="form-control" placeholder="Insert password">
                 <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
-              </div>
-              <div class="col-6 mb-2">
-                <label for="">Return date</label>
-                <input name="txtEmail" required type="date" class="form-control" placeholder="Insert return date">
-                <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-2 mb-2">
-                <label for="">Payment</label>
-                <select name="paymentMethod" required>
-                  <option value="creditCard">Credit card</option>
-                  <option value="paypal">PayPal</option>
-                  <option value="bankTransfer">Bank transfer</option>
-                </select>
-                <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
-              </div>
-            </div>
-              <div class="row">
-              <div class="col-6 mb-2">
-                <label name=""for="">Insert Password</label>
-                <input name="txtPasswordConfirm" required type="password" class="form-control" placeholder="Insert password">
-                <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
+                <div class="invalid-feedback">Invalid data</div>
               </div>
               <div class="col-6 mb-2">
                 <label name=""for="">Confirm password</label>
-                <input name="txtPasswordConfirm" required type="password" class="form-control" placeholder="Confirm Password">
+                <input name="txtPasswordConfirm" required type="password" class="form-control" placeholder="Insert password">
                 <div class="valid-feedback">Correct</div>
-                <div class="invalid-feedback">Required field</div>
+                <div class="invalid-feedback">Invalid data</div>
               </div>
             </div>
             </div>
@@ -241,14 +222,16 @@
               <button type="submit" class="btn btn-dark" id="btnSave">Guardar</button>
             </div>
         </form>
-
-
+        
+        </div>
+      </div>
+    </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
-    <script src="./js/reservas.js"></script>
-
+      <script src="./js/suscription.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </body>

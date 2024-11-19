@@ -17,9 +17,12 @@
                 Routify
             </h1>
             <ul class="nav flex-column">
-              <li class="nav-item h5 mx-2"><a href="./index.html" class="nav-link text-white"><i class="bi bi-house mx-2"></i>Home</a></li>
-              <li class="nav-item h5 mx-2"><a href="./Reservas.html" class="nav-link text-white"><i class="fa-solid fa-list-check" style="color: #ffffff;"></i>&nbsp;Reservations</a></li>
-              <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i class="bi bi-people mx-2"></i>User</a></li>
+              <li class="nav-item h5 mx-2"><a href="./index.html" class="nav-link text-white"><i class="fa-solid fa-house"></i>&nbsp;Home</a></li>
+              <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i class="fa-solid fa-user"></i>&nbsp;User</a></li>
+              <li class="nav-item h5 mx-2"><a href="./Reservas.html" class="nav-link text-white"><i class="fa-solid fa-plane-circle-check"></i>&nbsp;Reservations</a></li>
+              <li class="nav-item h5 mx-2"><a href="./suscription.html" class="nav-link text-white"><i class="fa-regular fa-handshake"></i>&nbsp;Suscription</a></li>
+              <li class="nav-item h5 mx-2"><a href="./suscription_status.html" class="nav-link text-white"><i class="fa-solid fa-handshake"></i>&nbsp;Suscription Status</a></li>
+              <li class="nav-item h5 mx-2"><a href="./payment.html" class="nav-link text-white"><i class="fa-solid fa-bag-shopping"></i>&nbsp;Payment</a></li>
             </ul>
         </aside>
         <!--end sidebbar-->
@@ -68,13 +71,25 @@
             <!--end hedear-->
             <!--Row stats-->
             <div class="row mx-4 px-4 my-4" style="padding-top: 30px;">
+              <div class="col-4">
+                 Fecha Inicio
+                <input name="txtEmail" required type="date" class="form-control" placeholder="Insert departure date">
+              </div>
+              <div class="col-4">
+                Fecha Final
+                <input name="txtEmail" required type="date" class="form-control" placeholder="Insert departure date">
+              </div>
+              <div class="col-4">
+                <button class="btnrft" style="width: 100%; margin-top: 20px;">Filtrar</class>
+              </div>
+            </div>
+            <div class="row mx-4 px-4 my-4">
               <div class="col-3">
                 <div class="card">
                   <div class="card-body">
                     <h6><i class="bi bi-wallet"></i>&nbsp;Monthly Income</h6>
                     <h6 class="h3 text-center">$2000.00</h6>
                   </div>
-                  
                 </div>
               </div>
               <div class="col-3">
@@ -83,7 +98,6 @@
                     <h6><i class="bi bi-people-fill"></i>&nbsp;Clients</h6>
                     <h6 class="h3 text-center">2</h6>
                   </div>
-                  
                 </div>
               </div>
               <div class="col-3">
@@ -92,7 +106,6 @@
                     <h6><i class="fa-solid fa-list-check"></i>&nbsp;Reservations</h6>
                     <h6 class="h3 text-center">40</h6>
                   </div>
-                  
                 </div>
               </div>
               <div class="col-3">
@@ -101,7 +114,6 @@
                     <h6><i class="bi bi-cash-stack"></i>&nbsp;Debtors </h6>
                     <h6 class="h3 text-center">$00.00</h6>
                   </div>
-                  
                 </div>
               </div>
             </div>
