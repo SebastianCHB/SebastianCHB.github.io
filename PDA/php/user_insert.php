@@ -1,24 +1,14 @@
-<?php 
-include("./conexion.php");
-    echo "insertando pelao";
+<?php
+include "./conexion.php";
     $name = $_POST['txtName'];
-    $apellido = $_POST['txtLast'];
-    $edad = $_POST['txtEdad'];
-    $estatura = $_POST['txtEstatura'];
-    $peso = $_POST['txtPeso'];
-    $email = $_POST['txtEmail'];
-    $password = $_POST['txtPassword'];
-    $passwordconfirm = $_POST['txtPasswordConfirm'];
+    $email= $_POST['txtEmail'];
+    $pass = $_POST['txtPassword'];
 
 
-    echo "Nombre: ".$name."<br>";
-    echo "Apellido: ".$apellido."<br>";
-    echo "Edad: ".$edad."<br>";
-    echo "Estatura: ".$estatura.".<br>";
-    echo "Email: ".$email."<br>";
-    echo "Password: ".$password."<br>";
-    echo "Confirmar contraseña: ".$passwordconfirm."<br>";
-    $conexion->query("insert into users (name,last_name,age,wight,height,email,password)
-    values ('$name','$apellido',$edad,$estatura,$peso,'$email','$password');") or die($conexion->error)
+    $con ="INSERT INTO users VALUES (0,'$name',1, '$email', '$pass')";
 
+        echo $con;
+        $conexion -> query($con) or die($conexion -> error);
+    
+    header("Location: ../users.php?status=1");
 ?>

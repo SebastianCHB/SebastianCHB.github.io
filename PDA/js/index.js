@@ -6,7 +6,7 @@ new Chart(ctx, {
     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
     datasets: [{
       label: 'Ingresos por mes',
-      data: [0,1000,500,200,200,100,0,0,0,0,0,0],
+      data: [0,0,0,0,0,0,0,0,0,0,0,0],
       borderWidth: 2
     }]
   },
@@ -28,7 +28,7 @@ const ctx1 = document.getElementById('chartCategorias');
       labels: ['Beach', 'Hotels', 'Museum', 'Others'],
       datasets: [{
         label: 'Top Reservations',
-        data: [1, 1, 0, 0],
+        data: [0, 0, 0, 0],
         borderWidth: 2
       }]
     },

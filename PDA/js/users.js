@@ -1,42 +1,16 @@
-document.getElementById("btnSave").onclick =(evt)=>{
-    evt.preventDefault()//evita recargar el form
-    document.getElementById("form").classList.add('was-validated')
+document.querySelectorAll(".btnEdit").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Obtén los datos del botón
+    const id = btn.getAttribute("data-id");
+    const name = btn.getAttribute("data-name");
+    const email = btn.getAttribute("data-email");
 
-    const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 2500,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        }
-      });
-      Toast.fire({
-        icon: "success",
-        title: "Datos guardados"
-      });
+    // Asigna los datos a los campos del modal
+    document.getElementById("txtIdEdit").value = id;
+    document.getElementById("txtNamee").value = name;
+    document.getElementById("txtEmaill").value = email;
 
-}
-
-document.querySelectorAll('.btndelete').forEach(button => {
-  button.onclick = (evt) => {
-    Swal.fire({
-      title: "Do you want to delete this user?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: "Deleted!",
-          text: "The user has been deleted.",
-          icon: "success"
-        });
-      }
-    });
-  };
+    // Debugging: Verifica en la consola
+    console.log("Datos enviados al modal:", { id, name, email });
+  });
 });
