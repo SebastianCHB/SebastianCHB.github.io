@@ -8,5 +8,5 @@
     if($conexion->connect_error){
         die("No hay sistema, Prende el XAMPP");
     }
-
+    
 ?>

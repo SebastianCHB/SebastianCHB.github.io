@@ -1,3 +1,15 @@
+<?php session_start();
+
+if (!isset($_SESSION['userdata'])) {
+    // Redirige al login si la sesión no está activa
+    header("Location: ../login.php");
+    // Desactivar la caché
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
+header("Pragma: no-cache"); // HTTP 1.0.
+header("Expires: 0"); // Proxies.
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,62 +24,12 @@
 <body>
     <div class="d-flex"> 
         <!--sidebbar-->
-        <aside class="vh-100" id="asidee" style="width: 20%;">
-            <h1 style="font-weight: bolder;" class="p-4 h1">
-                Routify
-            </h1>
-            <ul class="nav flex-column">
-              <li class="nav-item h5 mx-2"><a href="./index.html" class="nav-link text-white"><i class="fa-solid fa-house"></i>&nbsp;Home</a></li>
-              <li class="nav-item h5 mx-2"><a href="./users.html" class="nav-link text-white"><i class="fa-solid fa-user"></i>&nbsp;User</a></li>
-              <li class="nav-item h5 mx-2"><a href="./Reservas.html" class="nav-link text-white"><i class="fa-solid fa-plane-circle-check"></i>&nbsp;Reservations</a></li>
-              <li class="nav-item h5 mx-2"><a href="./suscription.html" class="nav-link text-white"><i class="fa-regular fa-handshake"></i>&nbsp;Suscription</a></li>
-              <li class="nav-item h5 mx-2"><a href="./suscription_status.html" class="nav-link text-white"><i class="fa-solid fa-handshake"></i>&nbsp;Suscription Status</a></li>
-              <li class="nav-item h5 mx-2"><a href="./payment.html" class="nav-link text-white"><i class="fa-solid fa-bag-shopping"></i>&nbsp;Payment</a></li>
-            </ul>
-        </aside>
+       <?php include "../layouts/aside.php"?>
         <!--end sidebbar-->
 
         <main class="flex-grow-1">
-            <!--header-->
-            <header>
-    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary px-4 py-4">
-        <div class="container-fluid">
-          <a class="navbar-brand" style="font-weight: bolder;" href="#">ROUTIFY ADMINISTRATION PANEL</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item mx-4">
-                <button type="button" class="btn btn-light position-relative" style="margin-top: 4px;">
-                  <i class="bi bi-bell"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  69
-                  <span class="visually-hidden">unread messages</span>
-                </span>
-              </button></li>
-              <li class="nav-item">
-                
-                <i class="fa-solid fa-user" style="margin-top: 14.5px;"></i>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Administrador
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" style="color: black;" href="#"><i class="bi bi-person" style="color: black;"></i>&nbsp;Perfil</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" style="color: black;" href="../login.html"><i class="bi bi-box-arrow-left"  style="color: black;"></i>&nbsp;Log Out</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-            </header>
+          <!--Header-->
+         <?php include "../layouts/header.php"?>
             <!--end hedear-->
             <!--Row stats-->
             <div class="row mx-4 px-4 my-4" style="padding-top: 30px;">
@@ -88,7 +50,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h6><i class="bi bi-wallet"></i>&nbsp;Monthly Income</h6>
-                    <h6 class="h3 text-center">$2000.00</h6>
+                    <h6 class="h3 text-center">$00.00</h6>
                   </div>
                 </div>
               </div>
@@ -96,7 +58,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h6><i class="bi bi-people-fill"></i>&nbsp;Clients</h6>
-                    <h6 class="h3 text-center">2</h6>
+                    <h6 class="h3 text-center">0</h6>
                   </div>
                 </div>
               </div>
@@ -104,7 +66,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h6><i class="fa-solid fa-list-check"></i>&nbsp;Reservations</h6>
-                    <h6 class="h3 text-center">40</h6>
+                    <h6 class="h3 text-center">00</h6>
                   </div>
                 </div>
               </div>

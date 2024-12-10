@@ -130,3 +130,14 @@ input[type="text"]:focus, input[type="password"]:focus {
     padding: 10px;
     box-sizing: border-box;
 }
+#btnregister {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    transition: 0.2s ease-in;
+}
+#btnregister:hover{
+    background-color: transparent;
+    border-color:black;
+    color: black;
+}
