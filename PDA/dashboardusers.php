@@ -1,12 +1,12 @@
-<?php session_start();
-    if(isset($_SESSION['userdata'])){
-      $user=$_SESSION['userdata'];
-    }else{
-      header("Location: ./login.php");
-    }
-include "./php/conexion.php";
-$sql="SELECT * FROM paquete_viaje";
-$res = $conexion->query($sql) or die($conexion->error);
+    <?php session_start();
+        if(isset($_SESSION['userdata'])){
+        $user=$_SESSION['userdata'];
+        }else{
+        header("Location: ./login.php");
+        }
+    include "./php/conexion.php";
+    $sql="SELECT * FROM paquete_viaje";
+    $res = $conexion->query($sql) or die($conexion->error);
 
 // Si se envió el formulario de reserva
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['detalles'])) {
@@ -54,12 +54,13 @@ echo "<script>window.location.href = '?id_paquete=$id_paquete&tipo=$tipo_pago&de
             <?php while ($paquete = mysqli_fetch_assoc($res)) { ?>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3"> <!-- Ajustar el tamaño de las columnas -->
                     <div class="card">
-                        <img src="./img/travels/<?php echo $paquete['imagen']; ?>" class="card-img-top" alt="Imagen Paquete">
+                        <img src="./img/travels/<?php echo $paquete['imagen']; ?>" class="card-img-top" alt="Imagen Paquete" >
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $paquete['nombre_paquete']; ?></h5>
                             <p class="card-text"><?php echo $paquete['descripcion']; ?></p>
                             <p class="card-text">Precio: $<?php echo number_format($paquete['precio'], 2); ?></p>
                             <p class="card-text">Duración: <?php echo $paquete['duracion']; ?></p>
+                            
                             
                             <!-- Botón de reserva que abre el modal -->
                             <button type="button" class="btn btn-primary btn-purple" data-bs-toggle="modal" data-bs-target="#reservaModal<?php echo $paquete['id_paquete']; ?>">

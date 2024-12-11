@@ -24,7 +24,7 @@
                   <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" style="color: black;" href="../login.php"><i class="bi bi-box-arrow-left"  style="color: black;"></i>&nbsp;Log Out</a></li>
+                  <li><a class="dropdown-item" style="color: black;" href="./php/logout.php"><i class="bi bi-box-arrow-left"  style="color: black;"></i>&nbsp;Log Out</a></li>
                 </ul>
               </li>
             </ul>

@@ -2,7 +2,7 @@
     if(isset($_SESSION['userdata'])){
       $user=$_SESSION['userdata'];
     }else{
-      header("Location: ./login.php");
+      header("Location: ../login.php");
     }
 include "./php/conexion.php";
 $sql="select * from paquete_viaje order by id_paquete ASC ";

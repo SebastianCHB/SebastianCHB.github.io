@@ -2,7 +2,7 @@
     if(isset($_SESSION['userdata'])){
       $user=$_SESSION['userdata'];
     }else{
-      header("Location: ./login.php");
+      header("Location: ../login.php");
     }
     // Desactivar la caché
 header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1.
