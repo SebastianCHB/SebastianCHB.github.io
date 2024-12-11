@@ -2,40 +2,53 @@ create database Routify;
 use Routify;
 drop database Routify
 
-drop table users;
-create table users(
- id_user integer not null auto_increment,
- nombre varchar(30),
- rol TINYINT,
- email varchar(100),
- password varchar(100),
- primary key (id_user)
+-- Tabla de Usuarios
+CREATE TABLE users (
+    id_user INT NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(30),
+    rol TINYINT,
+    email VARCHAR(100),
+    password VARCHAR(100),
+    PRIMARY KEY (id_user)
 );
 
-create table reservations(
-id_reserva integer not null auto_increment,
-fecha_ida date,
-fecha_regreso date,
-id_user int,
-id_paquete int,
-primary key (id_reserva))
+-- Tabla de Paquetes de Viaje
+CREATE TABLE paquete_viaje (
+    id_paquete INT NOT NULL AUTO_INCREMENT,
+    nombre_paquete VARCHAR(30),
+    descripcion VARCHAR(50),
+    precio DECIMAL(10, 2),
+    duracion VARCHAR(20),
+    imagen VARCHAR(35),
+    PRIMARY KEY (id_paquete)
+);
 
-create table paquete_viaje(
-id_paquete integer not null auto_increment,
-nombre_paquete varchar(30),
-descripcion varchar(50),
-precio decimal(10),
-duracion varchar(20),
-imagen varchar (35),
-primary key (id_paquete))
+-- Tabla de Reservas
+CREATE TABLE reservations (
+    id_reserva INT NOT NULL AUTO_INCREMENT,
+    fecha_ida DATE,
+    fecha_regreso DATE,
+    id_user INT,
+    id_paquete INT,
+    PRIMARY KEY (id_reserva),
+    FOREIGN KEY (id_user) REFERENCES users(id_user)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_paquete) REFERENCES paquete_viaje(id_paquete)
+        ON DELETE SET NULL ON UPDATE CASCADE
+);
 
-create table pago(
-id_pago int not null auto_increment,
-tipo varchar(30),
-detalles varchar(20),
-fecha_registro date,
-id_paquete int,
-primary key(id_pago))
+-- Tabla de Pagos
+CREATE TABLE pago (
+    id_pago INT NOT NULL AUTO_INCREMENT,
+    tipo VARCHAR(30),
+    detalles VARCHAR(20),
+    fecha_registro DATE,
+    id_paquete INT,
+    PRIMARY KEY (id_pago),
+    FOREIGN KEY (id_paquete) REFERENCES paquete_viaje(id_paquete)
+        ON DELETE CASCADE ON UPDATE CASCADE
+);
+
 
 create table categorias(
 id_categoria int not null auto_increment,
@@ -48,37 +61,34 @@ values ('Sebastian',1,'sebastianadmin@gmail.com','12345678'),
 ('Andres',2,'andresillo@gmail.com','87654321'),
 ('Pepe',2,'Pepepro@gmail.com','pepe123')
 
-drop table reservations
-INSERT INTO reservations (fecha_ida, fecha_regreso, id_user, id_paquete) 
-VALUES ('2024-12-15', '2024-12-20',1, 1),
-('2024-12-22', '2024-12-30', 2, 2)
-
-select * from paquete_viaje
-drop table paquete_viaje 
 INSERT INTO paquete_viaje (nombre_paquete, descripcion, precio, duracion, imagen) 
 VALUES ('Paquete Caribe', 'Viaje al Caribe todo incluido', 1200.50, '5 días', 'caribe.jpg'),
 ('Paquete Europa', 'Tour por Europa', 2500.75, '10 días', 'europa.jpg');
 
-drop table pago 
+INSERT INTO reservations (fecha_ida, fecha_regreso, id_user, id_paquete) 
+VALUES ('2024-12-15', '2024-12-20',1, 1),
+('2024-12-22', '2024-12-30', 2, 2)
+
 INSERT INTO pago (tipo, detalles, fecha_registro, id_paquete) 
 VALUES ('Tarjeta de crédito', 'Pago por VISA', '2024-12-01',1),
 ('Transferencia bancaria', 'Pago por Banco XYZ', '2024-12-02',2)
 
+
+/*REVISION A PARTE - NO EJECUTAR*/
+
 /*RESERVAS FORANEAS*/
-alter table reservations add constraint id_userr foreign key (id_user) references users(id_user)
 alter table reservations add constraint id_paquetee foreign key (id_paquete) references paquete_viaje(id_paquete)
 alter table pago add constraint id_paqueteon foreign key (id_paquete) references paquete_viaje(id_paquete)
-
-
-ALTER TABLE reservations DROP FOREIGN KEY id_userr;
 
 ALTER TABLE reservations
 ADD CONSTRAINT id_userr FOREIGN KEY (id_user) REFERENCES users(id_user) ON DELETE CASCADE;
 ALTER TABLE reservations
 MODIFY COLUMN id_user INT NULL;
 
+/*REVISION A PARTE - NO EJECUTAR*/
 
 
+/*EVALUACION BASES DE DATOS */
 /*FUNCION*/
 CREATE FUNCTION calcular_ingresos_paquete(id_paquete INT)
 RETURNS DECIMAL(10, 2)
@@ -177,3 +187,8 @@ INNER JOIN
 INNER JOIN 
     paquete_viaje ON reservations.id_paquete = paquete_viaje.id_paquete;
 /*END INNER JOIN DEL REGISTRO*/
+ 
+
+   /*PRUEBAS*/
+   DELETE FROM pago WHERE id_paquete = 2; 
+   select * from users

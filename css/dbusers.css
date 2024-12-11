@@ -1,0 +1,15 @@
+/* Agregar el efecto zoom a la imagen */
+.card-img-top {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* 1.05 hace que la imagen se agrande un 5% */
+}
+
+/* Para mejorar la interacción, puedes hacer que la tarjeta se eleve un poco */
+.card:hover {
+    transform: translateY(-10px); /* Mueve la tarjeta hacia arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra suave */
+}
+    

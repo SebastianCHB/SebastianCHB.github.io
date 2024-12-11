@@ -23,7 +23,7 @@ include("./conexion.php");
         if($fila[2] == 1){
             header("Location: ../index.php");
         }else{
-          header("Location: ../../index.html");
+          header("Location: ../dashboardusers.php");
         }
     }else{
         echo"Datos no validos";
