@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LYA2</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <div class="logo"></div>
+    </a>    
+        <div class="select-container">
+            <select id="contenido" name="contenido">
+                <option value="" disabled selected>Contenido</option>
+                <option value="unidad1.html">Unidad 1</option>
+                <option value="unidad2.html">Unidad 2</option>
+                <option value="unidad3.html">Unidad 3</option>
+                <option value="unidad4.html">Unidad 3</option>
+            </select>
+        </div>
+    </header>
+  <main>
+
+    <section class="content fade-in">
+    <h1 style="font-size: 50px; text-align: center; color: #3700b7;">Unidad 1</h1>
+    <h2>Análisis semántico</h2>
+      <p>
+        El análisis semántico es el estudio del significado de las palabras, frases y oraciones, y cómo se relacionan entre sí. Se enfoca en la interpretación del contenido, el contexto y la comprensión del lenguaje natural. En esencia, busca entender qué significa algo, más allá de la simple estructura gramatical. 
+  </p>
+  <p>El análisis semántico es una tarea compleja porque:
+<ul>
+    <li>El lenguaje natural es ambiguo:
+Una palabra o frase puede tener varios significados, dependiendo del contexto.
+</li>
+<li>El significado no siempre es explícito:
+A veces, el significado se infiere a través de la relación entre palabras, frases y el conocimiento del mundo.
+</li>
+<li>La comprensión humana es intuitiva:
+Los humanos no suelen analizar el lenguaje de forma lógica, sino que lo interpretan de forma natural. </p>
+</li>
+</ul>    
+<h1>1.1 Árboles de Expresiones</h1>
+    <p>Los árboles de expresión son estructuras jerárquicas que representan las expresiones matemáticas o lógicas de un lenguaje de programación. Cada nodo del árbol corresponde a un operador, y las hojas del árbol corresponden a los operandos (valores, variables, literales, etc.).</p>
+
+    <h1>Detalles:</h1>
+    <ul>
+      <li><strong>Propósito:</strong> Un árbol de expresión es utilizado para representar las operaciones de una expresión en una estructura fácil de manejar. Permite realizar optimizaciones y evaluaciones semánticas de manera eficiente.</li>
+      <li><strong>Operadores:</strong> Cada nodo del árbol puede ser un operador (por ejemplo, +, -, *, / en expresiones aritméticas), y las ramas del árbol representan las relaciones entre los operadores y sus operandos.</li>
+      <li><strong>Evaluación:</strong> Durante la evaluación de una expresión, el compilador recorrerá el árbol de expresión para calcular el valor correspondiente. Los árboles de expresión pueden ser utilizados también en la generación de código intermedio.</li>
+    </ul>
+     <div class="center-image">
+  <img class="img" src="./img/2000_5e344e7861358.webp" alt="arbol de expresion" width="300" height="300">
+</div>
+
+    </section>
+  </main>
+<script>
+  document.getElementById('contenido').addEventListener('change', function () {
+    const selectedUrl = this.value;
+    if (selectedUrl) {
+      window.location.href = selectedUrl;  // Redirige a la URL seleccionada
+    }
+  });
+
+  document.getElementById('tema').addEventListener('change', function () {
+    const selectedTema = this.value;
+    if (selectedTema) {
+      // Aquí podrías agregar alguna acción, dependiendo de lo que quieras hacer
+      alert('Seleccionaste ' + selectedTema);
+    }
+  });
+
+
+  
+</script>
+
+
+
+
+</body>
+</html>

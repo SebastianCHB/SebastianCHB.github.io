@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>LYA2</title>
+  <link rel="stylesheet" href="./styles/styles.css" />
+</head>
+<body>
+
+<header>
+        <div class="logo"></div>
+        <div class="select-container">
+            <select id="contenido" name="contenido">
+                <option value="" disabled selected>Contenido</option>
+                <option value="unidad1.html">Unidad 1</option>
+                <option value="unidad2.html">Unidad 2</option>
+                <option value="unidad3.html">Unidad 3</option>
+                <option value="unidad4.html">Unidad 3</option>
+            </select>
+        </div>
+    </header>
+  <main>
+    <section class="hero">
+      <div class="overlay fade-in">
+        <h1 class="slide-in">LENGUAJES Y AUTOMATAS II</h1>
+        <p class="fade-in-delay">Web informativa</p>
+      </div>
+    </section>
+
+    <section class="content fade-in">
+      <h2>Objetivo</h2>
+      <p>
+        En ésta asignatura se debe desarrollar el análisis semántico, la generación de código, la
+        optimización y la generación del código objeto para obtener el funcionamiento de un
+        compilador.
+  </p>
+      <p>
+        También se busca proveer al estudiante de herramientas, conocimientos y habilidades
+necesarias para desarrollar un compilador con base en los conocimientos previos de la
+asignatura Lenguajes y Autómatas I. La aportación de ésta asignatura es relevante en el
+ámbito del desarrollo de software de sistemas.
+    </p>
+      <p>
+        Es indispensable distinguir que la carrera de Ingeniería en Sistemas Computacionales se
+basa, no sólo en el desarrollo de software comercial y administrativo, sino también en el
+desarrollo de software científico y para el desarrollo tecnológico. Ésta asignatura se ubica
+en la segunda categoría y es indispensable desarrollar software en estos campos para
+preparar a los egresados y tengan la posibilidad de cursar posgrados de alto nivel.
+    </p>
+     <p>
+La asignatura trata de concretar un traductor iniciado en la asignatura previa para que el
+estudiante comprenda que es capaz, mediante técnicas bien definidas, de crear su propio
+lenguaje de programación.
+</p>
+      <h2>La aportación de la asignaturaerá la siguiente:</h2>
+      <ul>
+        <li>Implementa aplicaciones computacionales para solucionar problemas de diversos
+contextos, integrando diferentes tecnologías, plataformas o dispositivos.</li>
+        <li>Diseña, desarrolla y aplica modelos computacionales para solucionar problemas,
+mediante la selección y uso de herramientas matemáticas.</li>
+        <li>Diseña e implementa interfaces para la automatización de sistemas de hardware y
+desarrollo del software asociado.</li>
+      </ul>
+
+      <h2>Elaboracion</h2>
+      <p>
+            Este sitio web fue elaborado por 
+            <Ul>
+                <Li>Morales Quezada Andres</Li>
+                <li>Chacon Bencomo Sebastian</li>
+            </Ul>
+      </p>
+       
+    </section>
+  </main>
+<script>
+  document.getElementById('contenido').addEventListener('change', function () {
+    const selectedUrl = this.value;
+    if (selectedUrl) {
+      window.location.href = selectedUrl;  // Redirige a la URL seleccionada
+    }
+  });
+
+  document.getElementById('tema').addEventListener('change', function () {
+    const selectedTema = this.value;
+    if (selectedTema) {
+      // Aquí podrías agregar alguna acción, dependiendo de lo que quieras hacer
+      alert('Seleccionaste ' + selectedTema);
+    }
+  });
+</script>
+
+
+
+
+</body>
+</html>
